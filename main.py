@@ -6,6 +6,9 @@ def read_file(file_name):
         raise ValueError("File is empty")
     return lines
 
+def filter_lines_by_word(lines, word):
+    filtered_lines = [line for line in lines if word.lower() in line.lower()]
+    return filtered_lines
 
 if __name__ == '__main__':
     pass

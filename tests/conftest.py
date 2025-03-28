@@ -19,3 +19,12 @@ def prepare_text_file(tmp_path):
         ]
         file.writelines(lines)
     return target_file
+
+
+@pytest.fixture(autouse=True)
+def prepare_empty_text_file(tmp_path):
+    target_file = os.path.join(tmp_path, 'empty.txt')
+    with open(target_file, 'w') as file:
+        lines = []
+        file.writelines(lines)
+    return target_file

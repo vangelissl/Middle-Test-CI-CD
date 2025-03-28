@@ -1,6 +1,7 @@
 import pytest
 import os
 
+
 @pytest.fixture(autouse=True)
 def prepare_text_file(tmp_path):
     target_file = os.path.join(tmp_path, 'test.txt')
@@ -28,3 +29,6 @@ def prepare_empty_text_file(tmp_path):
         lines = []
         file.writelines(lines)
     return target_file
+
+
+

@@ -8,6 +8,7 @@ def read_file(file_name):
 
 def filter_lines_by_word(lines, word):
     filtered_lines = [line for line in lines if word.lower() in line.lower()]
+    print(len(filtered_lines))
     return filtered_lines
 
 if __name__ == '__main__':
